@@ -14,7 +14,7 @@ import java.lang.ref.WeakReference;
  */
 public class BasePresenter<T extends IBaseView> implements LifecycleObserver {
 
-    WeakReference<T> IView;
+    protected WeakReference<T> IView;
 
     /**
      * 绑定View

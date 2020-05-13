@@ -2,6 +2,7 @@ package com.sk.mvpdemo.base;
 
 import android.os.Bundle;
 
+import androidx.annotation.LayoutRes;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,7 +15,9 @@ import com.sk.mvpdemo.view.base.IBaseView;
  */
 public abstract class BaseActivity<T extends BasePresenter, V extends IBaseView> extends AppCompatActivity {
 
-    //持有表示层
+    /**
+     * 持有表示层
+     */
     protected T presenter;
 
     @Override
@@ -28,6 +31,7 @@ public abstract class BaseActivity<T extends BasePresenter, V extends IBaseView>
         init();
     }
 
+    @LayoutRes
     protected abstract int getContentView();
 
     protected abstract T createPresenter();
